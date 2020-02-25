@@ -1,0 +1,758 @@
+[
+  {
+    "id": 3,
+    "email": "n.mack@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5342349999991711
+  },
+  {
+    "id": 5,
+    "email": "s.harris@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5899070000159554
+  },
+  {
+    "id": 6,
+    "email": "e.brundrett@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.48678999999538064
+  },
+  {
+    "id": 7,
+    "email": "h.green@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.47378900001058355
+  },
+  {
+    "id": 9,
+    "email": "m.healey@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4839360000041779
+  },
+  {
+    "id": 11,
+    "email": "h.cooper@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.522910999978194
+  },
+  {
+    "id": 12,
+    "email": "c.freer@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5261979999777395
+  },
+  {
+    "id": 14,
+    "email": "p.arch@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5288029999937862
+  },
+  {
+    "id": 15,
+    "email": "e.priestnall@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.48006099998019636
+  },
+  {
+    "id": 16,
+    "email": "d.knight@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5319319999834988
+  },
+  {
+    "id": 17,
+    "email": "m.darling@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5777719999896362
+  },
+  {
+    "id": 18,
+    "email": "s.green@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5283500000077765
+  },
+  {
+    "id": 19,
+    "email": "l.blyth@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5282230000011623
+  },
+  {
+    "id": 20,
+    "email": "t.reilly@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.45682900000247173
+  },
+  {
+    "id": 21,
+    "email": "d.lake@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4944899999827612
+  },
+  {
+    "id": 22,
+    "email": "o.woodington@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5489529999904335
+  },
+  {
+    "id": 23,
+    "email": "t.davis@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4749559999909252
+  },
+  {
+    "id": 24,
+    "email": "a.beadle@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5585019999998622
+  },
+  {
+    "id": 25,
+    "email": "k.shingfield@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4812249999959022
+  },
+  {
+    "id": 26,
+    "email": "s.beckley@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.48274800000945106
+  },
+  {
+    "id": 27,
+    "email": "d.bayliss@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.458941999997478
+  },
+  {
+    "id": 28,
+    "email": "r.james@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.6842370000085793
+  },
+  {
+    "id": 29,
+    "email": "s.brereton@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4797859999816865
+  },
+  {
+    "id": 30,
+    "email": "s.robbins@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5771859999804292
+  },
+  {
+    "id": 31,
+    "email": "j.iu@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.6316470000019763
+  },
+  {
+    "id": 32,
+    "email": "a.broletti@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.47983100000419654
+  },
+  {
+    "id": 33,
+    "email": "i.craig@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.590979000000516
+  },
+  {
+    "id": 34,
+    "email": "s.lowe@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5402559999783989
+  },
+  {
+    "id": 35,
+    "email": "j.finn@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.6013469999888912
+  },
+  {
+    "id": 36,
+    "email": "b.crawford@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4854209999903105
+  },
+  {
+    "id": 37,
+    "email": "c.preston@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5061409999907482
+  },
+  {
+    "id": 38,
+    "email": "a.cocker@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5924030000169296
+  },
+  {
+    "id": 39,
+    "email": "c.toillion@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5286970000015572
+  },
+  {
+    "id": 40,
+    "email": "m.rhodes@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.48181699999258853
+  },
+  {
+    "id": 41,
+    "email": "g.osborne@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4883900000131689
+  },
+  {
+    "id": 42,
+    "email": "a.savio@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.7085479999950621
+  },
+  {
+    "id": 43,
+    "email": "e.mcquitty@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.921135000011418
+  },
+  {
+    "id": 44,
+    "email": "s.lovett@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5544219999865163
+  },
+  {
+    "id": 45,
+    "email": "k.thiel@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4922659999865573
+  },
+  {
+    "id": 46,
+    "email": "c.beck@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.9738000000070315
+  },
+  {
+    "id": 47,
+    "email": "d.kindley@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5290239999885671
+  },
+  {
+    "id": 48,
+    "email": "j.molesworth@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5272560000012163
+  },
+  {
+    "id": 49,
+    "email": "j.bird@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5298759999859612
+  },
+  {
+    "id": 50,
+    "email": "j.myers@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5077340000134427
+  },
+  {
+    "id": 51,
+    "email": "i.gilbertson@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5487960000173189
+  },
+  {
+    "id": 52,
+    "email": "l.golembieski@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4928409999993164
+  },
+  {
+    "id": 53,
+    "email": "s.arminante@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.48749500000849366
+  },
+  {
+    "id": 54,
+    "email": "p.daw@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5006930000090506
+  },
+  {
+    "id": 55,
+    "email": "e.wheeler@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.9852409999875817
+  },
+  {
+    "id": 57,
+    "email": "b.dhamankar@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5291640000068583
+  },
+  {
+    "id": 58,
+    "email": "a.stoian@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5279460000165273
+  },
+  {
+    "id": 59,
+    "email": "j.graham@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5282390000065789
+  },
+  {
+    "id": 60,
+    "email": "j.wilson@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5252350000082515
+  },
+  {
+    "id": 62,
+    "email": "g.allen@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5255789999791887
+  },
+  {
+    "id": 63,
+    "email": "s.mills@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4570250000106171
+  },
+  {
+    "id": 64,
+    "email": "m.poole@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.48009599998476915
+  },
+  {
+    "id": 68,
+    "email": "l.potter@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5346810000191908
+  },
+  {
+    "id": 69,
+    "email": "j.meacham@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5220360000093933
+  },
+  {
+    "id": 70,
+    "email": "r.noble@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.6287580000062007
+  },
+  {
+    "id": 71,
+    "email": "e.hodges@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5359339999849908
+  },
+  {
+    "id": 72,
+    "email": "y.ozcelik@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4846229999966454
+  },
+  {
+    "id": 76,
+    "email": "d.patel@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5306059999857098
+  },
+  {
+    "id": 77,
+    "email": "n.barnett@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4815050000033807
+  },
+  {
+    "id": 78,
+    "email": "o.weston@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4920390000042971
+  },
+  {
+    "id": 81,
+    "email": "r.li@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5249760000151582
+  },
+  {
+    "id": 82,
+    "email": "s.szeto@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5298100000072736
+  },
+  {
+    "id": 87,
+    "email": "a.fuhr@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.7494779999833554
+  },
+  {
+    "id": 88,
+    "email": "c.bigland@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.7138490000215825
+  },
+  {
+    "id": 89,
+    "email": "b.farnworth@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5348970000050031
+  },
+  {
+    "id": 90,
+    "email": "s.thomson@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4647259999765083
+  },
+  {
+    "id": 94,
+    "email": "c.mussell@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.44933299999684095
+  },
+  {
+    "id": 95,
+    "email": "h.ashfaq@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4936779999989085
+  },
+  {
+    "id": 96,
+    "email": "c.tixier@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5406460000085644
+  },
+  {
+    "id": 97,
+    "email": "s.cross@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5542420000128914
+  },
+  {
+    "id": 98,
+    "email": "j.mccarthy@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5176180000125896
+  },
+  {
+    "id": 99,
+    "email": "d.green@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5229189999809023
+  },
+  {
+    "id": 100,
+    "email": "r.rodgers@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.47497799998382106
+  },
+  {
+    "id": 101,
+    "email": "a.wilson@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5488529999856837
+  },
+  {
+    "id": 102,
+    "email": "d.wheeler@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5536830000055488
+  },
+  {
+    "id": 106,
+    "email": "l.papps@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4290939999918919
+  },
+  {
+    "id": 107,
+    "email": "e.duncan@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5243520000076387
+  },
+  {
+    "id": 109,
+    "email": "g.jones@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4949299999861978
+  },
+  {
+    "id": 110,
+    "email": "m.ossieur@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.46898499998496845
+  },
+  {
+    "id": 111,
+    "email": "n.schneider@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5227630000154022
+  },
+  {
+    "id": 113,
+    "email": "l.meads@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5667839999950957
+  },
+  {
+    "id": 114,
+    "email": "h.foley@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5256590000062715
+  },
+  {
+    "id": 115,
+    "email": "c.longmore@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5276679999951739
+  },
+  {
+    "id": 116,
+    "email": "k.richards@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5295100000221282
+  },
+  {
+    "id": 117,
+    "email": "j.ashfield@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4802549999731127
+  },
+  {
+    "id": 122,
+    "email": "l.roberts@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5279210000007879
+  },
+  {
+    "id": 128,
+    "email": "k.elliott@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5635009999969043
+  },
+  {
+    "id": 129,
+    "email": "p.richardson@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.8979079999844544
+  },
+  {
+    "id": 140,
+    "email": "p.walsh@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4790740000025835
+  },
+  {
+    "id": 153,
+    "email": "l.white@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5265629999921657
+  },
+  {
+    "id": 165,
+    "email": "l.bedward@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.6304180000151973
+  },
+  {
+    "id": 175,
+    "email": "k.clarke@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.777418999990914
+  },
+  {
+    "id": 179,
+    "email": "l.campbell@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.48545500001637265
+  },
+  {
+    "id": 202,
+    "email": "m.price@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4938659999752417
+  },
+  {
+    "id": 208,
+    "email": "k.steele@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5168610000109766
+  },
+  {
+    "id": 209,
+    "email": "t.kennedy@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5344399999885354
+  },
+  {
+    "id": 231,
+    "email": "c.lansbury@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5633450000023004
+  },
+  {
+    "id": 232,
+    "email": "e.mcqueen@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.48497600000700913
+  },
+  {
+    "id": 237,
+    "email": "e.smith@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5263720000220928
+  },
+  {
+    "id": 255,
+    "email": "a.gray@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.4783210000023246
+  },
+  {
+    "id": 258,
+    "email": "s.robinson@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.47933499998180196
+  },
+  {
+    "id": 268,
+    "email": "k.bowen@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5300770000030752
+  },
+  {
+    "id": 290,
+    "email": "i.maldonado@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.48152900001150556
+  },
+  {
+    "id": 300,
+    "email": "m.williamson@gymshark.com",
+    "valid": true,
+    "throttled": false,
+    "time": 0.5215690000040922
+  }
+]

@@ -79,48 +79,50 @@ end
 i = 0
 verifier = UhOh365NG.new
 
-File.read("gymshark.txt").split("\n") do |email|
-  valid = false
-  throttled = true
-  while throttled
+time = Benchmark.measure do
+  File.read("gymshark.txt").split("\n") do |email|
+    valid = false
+    throttled = true
+    while throttled
 
-    time = Benchmark.measure do
-      email, valid, throttled = verifier.verify_v2(email)
+      time = Benchmark.measure do
+        email, valid, throttled = verifier.verify_v2(email)
+      end
+
+      i += 1
+
+
+      if valid
+        @data.push({
+          "id" => i,
+          "email" => email,
+          "valid" => valid,
+          "throttled" => throttled,
+          "time" => time.real,
+        })
+        puts(({
+          "id" => i,
+          "email" => email,
+          "valid" => valid,
+          "throttled" => throttled,
+          "time" => time.real,
+        }.to_s).blue)
+      else
+        puts(({
+          "id" => i,
+          "email" => email,
+          "valid" => false,
+          "throttled" => throttled,
+          "time" => time.real,
+        }.to_s).red)
+      end
     end
-
-    i += 1
-
-
-    if valid
-      @data.push({
-        "id" => i,
-        "email" => email,
-        "valid" => valid,
-        "throttled" => throttled,
-        "time" => time.real,
-      })
-      puts(({
-        "id" => i,
-        "email" => email,
-        "valid" => valid,
-        "throttled" => throttled,
-        "time" => time.real,
-      }.to_s).blue)
-    else
-      puts(({
-        "id" => i,
-        "email" => email,
-        "valid" => false,
-        "throttled" => throttled,
-        "time" => time.real,
-      }.to_s).red)
-    end
-  end
 
   # end
-  sleep(verifier.wait)
+    sleep(verifier.wait)
+  end
 end
 
-@threads.each(&:join)
-File.open("save.json") { |file| file.write(JSON.pretty_generate(@data)) }
+File.open("save.json", "w+") { |file| file.write(JSON.pretty_generate(@data)) }
 puts("Discovered #{@data.length} valid emails")
+puts("Completed in #{time.real}")
