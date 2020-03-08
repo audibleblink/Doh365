@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-require "mechanize"
-require "benchmark"
+
+require "mechanize" # v1 only
 require "net/http"
 require "uri"
 require "json"
@@ -8,121 +8,94 @@ require "colorize"
 
 class UhOh365NG
   attr_accessor :wait
+  attr_reader   :agent
 
-  def initialize
-    @agent = Mechanize.new
-    @wait = 0.8
+  def initialize(wait:, agent: nil)
+    @agent = agent
+    @wait  = wait
   end
 
   def verify_v1(email)
-    # Same method as UhOh365
-    @agent.request_headers = {"Accept" => "application/json"}
-    @agent.user_agent = "Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.12026; Pro)"
     begin
-
-      Timeout::timeout(30) do
-        code = @agent.get("https://outlook.office365.com/autodiscover/autodiscover.json/v1.0/#{email}?Protocol=Autodiscoverv1").code
-        return [email, code.to_i]
-      end
-
-    rescue Exception => e
+      code = agent.get("https://outlook.office365.com/autodiscover/autodiscover.json/v1.0/#{email}?Protocol=Autodiscoverv1").code
+      return [email, code.to_i]
+    rescue Exception
       return [email, 302]
     end
   end
 
   def verify_v2(email)
-    begin
       uri = URI.parse("https://login.microsoftonline.com/common/GetCredentialType")
       request = Net::HTTP::Post.new(uri)
       request.body = JSON.dump({
-        "username" => email,
-        "isOtherIdpSupported" => true,
-        "checkPhones" => false,
+        "username"             => email,
+        "isOtherIdpSupported"  => true,
         "isRemoteNGCSupported" => true,
-        "isCookieBannerShown" => false,
-        "isFidoSupported" => true,
+        "isFidoSupported"      => true,
+        "checkPhones"          => false,
+        "isCookieBannerShown"  => false,
       })
-      req_options = {use_ssl: uri.scheme == "https"}
 
-      response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
-        http.request(request)
-      end
-
-      if JSON.parse(response.body)["IfExistsResult"] == 0 and JSON.parse(response.body)["ThrottleStatus"] == 0
-        valid = true
-        throttled = false
-      elsif JSON.parse(response.body)["ThrottleStatus"] == 1
-        valid = false
-        throttled = true
-        puts("[-] We're being throttled now! Waiting and increasing wait by 1.7x")
-        @wait *= 1.7
-        puts("Wait set to #{wait}")
-        puts("Sleeping #{@wait * 10}")
-        sleep(@wait * 8)
-      else
-        if JSON.parse(response.body)["ThrottleStatus"] == 1
-          throttled = true
+      begin
+        response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
+          http.request(request)
         end
-
-        valid = false
+        body = JSON.parse(response.body)
+      rescue Exception => e
+        puts e
+        return [false, nil]
       end
 
-      return [email, valid, throttled]
-    rescue Exception => e
-      return [email, false, throttled]
-    end
+      is_throttled  = body["ThrottleStatus"] != 0
+      result_exists = body["IfExistsResult"] != 1
+      is_valid      = result_exists && !is_throttled
+
+      if is_throttled
+        puts "[-] We're being throttled now! Waiting and increasing wait by 1.7x"
+        wait = 1.7 * wait
+        puts "Wait set to #{wait}"
+        puts "Sleeping #{wait * 10}"
+        sleep(wait * 8)
+      end
+
+      [is_valid, is_throttled]
   end
 end
 
-@threads = []
-@data = []
-i = 0
-verifier = UhOh365NG.new
+# For use with v1 check
+# agent = Mechanize.new do |agent|
+#   agent.open_timeout   = 30
+#   agent.read_timeout   = 30
+#   agent.request_headers = {"Accept" => "application/json"}
+#   agent.user_agent = "Microsoft Office/16.0 (Windows NT 10.0; Microsoft Outlook 16.0.12026; Pro)"
+# end
 
-time = Benchmark.measure do
-  File.read("gymshark.txt").split("\n") do |email|
-    valid = false
-    throttled = true
-    while throttled
+ARGV.length == 1 || raise("Requires new-line seperated list of emails as only arg")
 
-      time = Benchmark.measure do
-        email, valid, throttled = verifier.verify_v2(email)
-      end
+verifier = UhOh365NG.new(wait: 0.8)
+emails   = File.readlines(ARGV[0]).map(&:chomp)
+start    = Time.now
 
-      i += 1
+results = emails.each_with_index.with_object([]) do |(email, idx), memo|
+  t_start = Time.now
+  valid, throttled = verifier.verify_v2(email)
+  entry = {
+    "id"        => idx + 1,
+    "email"     => email,
+    "valid"     => valid,
+    "throttled" => throttled,
+    "time"      => Time.now - t_start,
+  }
 
-
-      if valid
-        @data.push({
-          "id" => i,
-          "email" => email,
-          "valid" => valid,
-          "throttled" => throttled,
-          "time" => time.real,
-        })
-        puts(({
-          "id" => i,
-          "email" => email,
-          "valid" => valid,
-          "throttled" => throttled,
-          "time" => time.real,
-        }.to_s).blue)
-      else
-        puts(({
-          "id" => i,
-          "email" => email,
-          "valid" => false,
-          "throttled" => throttled,
-          "time" => time.real,
-        }.to_s).red)
-      end
-    end
-
-  # end
+  puts valid ? entry.to_s.blue : entry.to_s.red
+  if throttled
     sleep(verifier.wait)
+    redo
   end
+  memo.push(entry) if valid
 end
+total_time = Time.now - start
 
-File.open("save.json", "w+") { |file| file.write(JSON.pretty_generate(@data)) }
-puts("Discovered #{@data.length} valid emails")
-puts("Completed in #{time.real}")
+puts("Discovered #{results.length} valid emails")
+File.open("save.json", "w+") { |file| file.write(JSON.pretty_generate(results)) }
+puts("Completed in #{total_time}")
